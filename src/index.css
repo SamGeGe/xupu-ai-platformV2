@@ -245,14 +245,20 @@
 
   /* 移动端聊天容器优化 */
   .chat-container {
-    height: calc(100vh - 140px);
-    min-height: 350px;
+    height: calc(100vh - 120px);
+    min-height: 400px;
   }
 
-  /* 移动端iframe优化 */
+  /* 移动端iframe优化 - 最大化屏幕利用 */
   iframe {
-    min-height: 350px !important;
+    min-height: 400px !important;
     width: 100% !important;
+  }
+
+  /* 移动端页面容器优化 */
+  .mobile-chat-maximize {
+    height: calc(100vh - 100px) !important;
+    min-height: 400px !important;
   }
 }
 
@@ -306,4 +312,20 @@
 /* 深色模式支持 */
 @media (prefers-color-scheme: dark) {
   /* 已经是深色主题，保持现有样式 */
+}
+
+/* 反馈组件动画 */
+@keyframes scale-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
 }

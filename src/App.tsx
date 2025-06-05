@@ -18,6 +18,7 @@ const BidAnalysisPage = React.lazy(() => import('./pages/BidAnalysisPage'));
 const DisclaimerPage = React.lazy(() => import('./pages/DisclaimerPage'));
 const PrivacyPage = React.lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = React.lazy(() => import('./pages/TermsPage'));
+const FeedbackAdmin = React.lazy(() => import('./components/FeedbackAdmin'));
 const ProtectedRoute = React.lazy(() => import('./components/ProtectedRoute'));
 
 function App() {
@@ -79,6 +80,11 @@ function App() {
             <Route path="/meeting-minutes" element={
               <ProtectedRoute>
                 <MeetingMinutesPage />
+              </ProtectedRoute>
+            } />
+            <Route path="/feedback-admin" element={
+              <ProtectedRoute>
+                <FeedbackAdmin />
               </ProtectedRoute>
             } />
             <Route path="*" element={<Navigate to="/" replace />} />

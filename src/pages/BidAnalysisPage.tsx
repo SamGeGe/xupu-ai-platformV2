@@ -21,26 +21,27 @@ const BidAnalysisPage: React.FC = () => {
           <span className="text-sm sm:text-base">返回仪表板</span>
         </button>
 
-        <div className="max-w-[95%] sm:max-w-[90%] mx-auto h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)]">
-          <div className="bg-indigo-900/30 backdrop-blur-md border border-indigo-700/30 rounded-xl p-2 sm:p-4 h-full">
+        <div className="w-full mx-auto">
+          <div className="bg-indigo-900/30 backdrop-blur-md border border-indigo-700/30 rounded-xl p-2 sm:p-4">
             <div className="flex items-center mb-2 sm:mb-3">
-              <div className="bg-gradient-to-br from-blue-400 to-indigo-500 p-2 sm:p-2.5 rounded-lg text-white mr-2 sm:mr-3">
-                <GanttChart size={20} className="sm:w-6 sm:h-6" />
+              <div className="bg-gradient-to-br from-blue-400 to-indigo-500 p-2 sm:p-2.5 rounded-lg text-white mr-2 sm:mr-3 flex-shrink-0">
+                <GanttChart size={18} className="sm:w-6 sm:h-6" />
               </div>
-              <div>
-                <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">招投标分析</h1>
-                <p className="text-sm text-indigo-300">智能分析招投标文件和流程</p>
+              <div className="min-w-0 flex-1">
+                <h1 className="text-base sm:text-xl lg:text-2xl font-bold text-white truncate">招投标分析</h1>
+                <p className="text-xs sm:text-sm text-indigo-300">智能分析招投标文件和流程</p>
               </div>
             </div>
-            <div className="h-[calc(100%-2.75rem)] sm:h-[calc(100%-3.5rem)] flex items-center justify-center">
+            
+            <div className="relative w-full" style={{ 
+              height: 'calc(100vh - 160px)',
+              minHeight: '500px'
+            }}>
               <iframe
                 src="https://apps.scsup.com:9080/chatbot/Bm2dqaCjsvJQvIYD"
-                className="rounded-lg"
+                className="w-full h-full rounded-lg border-0"
                 style={{
-                  width: '1024px',
-                  height: '768px',
-                  maxWidth: '100%',
-                  maxHeight: '100%'
+                  minHeight: '500px'
                 }}
                 title="Bid Analysis Interface"
                 allow="microphone; camera; fullscreen; display-capture; clipboard-read; clipboard-write"

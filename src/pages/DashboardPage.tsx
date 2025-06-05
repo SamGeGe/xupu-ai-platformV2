@@ -15,6 +15,7 @@ import {
 import NetworkBackground from '../components/NetworkBackground';
 import FeatureButton from '../components/FeatureButton';
 import Header from '../components/Header';
+import FeedbackButton from '../components/FeedbackButton';
 import { getCurrentUser } from '../utils/auth';
 
 const DashboardPage: React.FC = () => {
@@ -77,7 +78,7 @@ const DashboardPage: React.FC = () => {
       <main className="flex-1 container mx-auto px-3 sm:px-4 py-3 sm:py-6">
         <div className="relative z-10 text-center mb-4 sm:mb-6">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">
-            欢迎, {user?.name}
+            欢迎使用旭普云AI
           </h1>
           <p className="text-indigo-200 text-xs sm:text-sm max-w-2xl mx-auto">
             使用我们的AI工具套件，提升工作效率
@@ -146,12 +147,23 @@ const DashboardPage: React.FC = () => {
         </div>
 
         <footer className="py-4 sm:py-6 text-center text-indigo-300/70 text-xs">
-          <div className="flex items-center justify-center gap-1">
-            <Cpu size={12} />
-            <p className="whitespace-nowrap">旭普云智慧空间信息技术有限公司 © {new Date().getFullYear()}</p>
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex items-center gap-1">
+              <Cpu size={12} />
+              <p className="whitespace-nowrap">旭普云智慧空间信息技术有限公司 © {new Date().getFullYear()}</p>
+            </div>
+            <button
+              onClick={() => navigate('/feedback-admin')}
+              className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors underline"
+            >
+              🔐 管理员入口 (需密码)
+            </button>
           </div>
         </footer>
       </main>
+      
+      {/* 意见反馈按钮 */}
+      <FeedbackButton />
     </div>
   );
 };

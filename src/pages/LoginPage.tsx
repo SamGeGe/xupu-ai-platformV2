@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Shield, Cpu, Eye, EyeOff } from 'lucide-react';
 import NetworkBackground from '../components/NetworkBackground';
+import FeedbackButton from '../components/FeedbackButton';
 import { login } from '../utils/auth';
 
 const LoginPage: React.FC = () => {
@@ -59,8 +60,8 @@ const LoginPage: React.FC = () => {
             <div className="flex justify-center mb-3">
               <Cpu className="h-12 w-12 text-blue-400" />
             </div>
-            <h1 className="text-3xl font-bold text-white mb-2 whitespace-nowrap">旭普云AI智能办公</h1>
-            <p className="text-indigo-200">安全访问您的AI工具</p>
+            <div className="text-4xl font-extrabold text-white mb-1 tracking-wide">旭普云</div>
+            <h2 className="text-2xl font-bold text-blue-200 mb-2">地理信息领域AI探索者</h2>
           </div>
 
           <div className="bg-indigo-900/30 backdrop-blur-md border border-indigo-700/30 rounded-xl p-8 shadow-xl shadow-purple-950/30">
@@ -138,6 +139,9 @@ const LoginPage: React.FC = () => {
               <p className="text-blue-200 text-xs text-center">
                 💡 提示：默认账号信息已预填，可直接点击登录
               </p>
+              <p className="text-indigo-300 text-xs text-center mt-2">
+                本AI适用对象：自然资源、农业农村、地理信息领域
+              </p>
             </div>
           </div>
         </div>
@@ -156,6 +160,9 @@ const LoginPage: React.FC = () => {
           </div>
         </div>
       </footer>
+      
+      {/* 意见反馈按钮 */}
+      <FeedbackButton />
     </div>
   );
 };

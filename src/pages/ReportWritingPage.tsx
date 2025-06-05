@@ -98,13 +98,21 @@ const ReportWritingPage: React.FC = () => {
                 </div>
                 <h2 className="text-lg font-semibold text-white">报告撰写助手</h2>
               </div>
-              <iframe
-                src="https://apps.scsup.com:9080/chatbot/0BMVkfAUEh7hHhUV"
-                className="w-full h-[calc(100vh-14rem)] rounded-lg"
-                title="AI Chat Interface"
-                allow="microphone; camera; fullscreen; display-capture; clipboard-read; clipboard-write"
-                sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation allow-top-navigation"
-              />
+              <div className="relative w-full" style={{ 
+                height: 'calc(100vh - 220px)',
+                minHeight: '500px'
+              }}>
+                <iframe
+                  src="https://apps.scsup.com:9080/chatbot/0BMVkfAUEh7hHhUV"
+                  className="w-full h-full rounded-lg border-0"
+                  style={{
+                    minHeight: '500px'
+                  }}
+                  title="Report Writing Interface"
+                  allow="microphone; camera; fullscreen; display-capture; clipboard-read; clipboard-write"
+                  sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation allow-top-navigation"
+                />
+              </div>
             </div>
           </div>
         </div>

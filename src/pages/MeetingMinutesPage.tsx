@@ -98,13 +98,21 @@ const MeetingMinutesPage: React.FC = () => {
                 </div>
                 <h2 className="text-lg font-semibold text-white">会议纪要助手</h2>
               </div>
-              <iframe
-                src="https://apps.scsup.com:9080/chatbot/PyYxUPoOntC0PYCU"
-                className="w-full h-[calc(100vh-14rem)] rounded-lg"
-                title="AI Chat Interface"
-                allow="microphone; camera; fullscreen; display-capture; clipboard-read; clipboard-write"
-                sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation allow-top-navigation"
-              />
+              <div className="relative w-full" style={{ 
+                height: 'calc(100vh - 220px)',
+                minHeight: '500px'
+              }}>
+                <iframe
+                  src="https://apps.scsup.com:9080/chatbot/PyYxUPoOntC0PYCU"
+                  className="w-full h-full rounded-lg border-0"
+                  style={{
+                    minHeight: '500px'
+                  }}
+                  title="Meeting Minutes Interface"
+                  allow="microphone; camera; fullscreen; display-capture; clipboard-read; clipboard-write"
+                  sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation allow-top-navigation"
+                />
+              </div>
             </div>
           </div>
         </div>

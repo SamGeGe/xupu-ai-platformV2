@@ -3,6 +3,7 @@ import { ArrowLeft, BookOpenCheck } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import NetworkBackground from '../components/NetworkBackground';
 import Header from '../components/Header';
+import FeedbackButton from '../components/FeedbackButton';
 
 const DeepResearchPage: React.FC = () => {
   const navigate = useNavigate();
@@ -34,15 +35,14 @@ const DeepResearchPage: React.FC = () => {
             </div>
             
             <div className="relative w-full" style={{ 
-              height: 'calc(100vh - 180px)',
-              minHeight: '400px'
+              height: 'calc(100vh - 160px)',
+              minHeight: '500px'
             }}>
               <iframe
                 src="https://apps.scsup.com:9080/chatbot/X7Fu8eHOhrQKWcZU"
                 className="w-full h-full rounded-lg border-0"
                 style={{
-                  minHeight: '400px',
-                  maxHeight: '800px'
+                  minHeight: '500px'
                 }}
                 title="Deep Research Interface"
                 allow="microphone; camera; fullscreen; display-capture; clipboard-read; clipboard-write"
@@ -58,6 +58,9 @@ const DeepResearchPage: React.FC = () => {
           </p>
         </div>
       </main>
+      
+      {/* 意见反馈按钮 */}
+      <FeedbackButton />
     </div>
   );
 };

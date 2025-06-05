@@ -3,6 +3,7 @@ import { ArrowLeft, FileText, Type, FileUp, Bot, Scale, CheckCircle, ChevronDown
 import { useNavigate } from 'react-router-dom';
 import NetworkBackground from '../components/NetworkBackground';
 import Header from '../components/Header';
+import FeedbackButton from '../components/FeedbackButton';
 
 const ContractReviewPage: React.FC = () => {
   const navigate = useNavigate();
@@ -114,17 +115,16 @@ const ContractReviewPage: React.FC = () => {
                 <h2 className="text-base sm:text-lg font-semibold text-white">合同审查专家</h2>
               </div>
               
-              {/* 响应式iframe容器 */}
+              {/* 响应式iframe容器 - 最大化屏幕利用 */}
               <div className="relative w-full" style={{ 
-                height: showInfo ? 'calc(100vh - 400px)' : 'calc(100vh - 200px)', // 根据信息面板状态调整高度
-                minHeight: '350px' // 最小高度保证可用性
+                height: showInfo ? 'calc(100vh - 360px)' : 'calc(100vh - 180px)', // 优化高度计算
+                minHeight: '500px' // 提升最小高度
               }}>
                 <iframe
                   src="https://apps.scsup.com:9080/chatbot/7BmdVUosP7MN5vjH"
                   className="w-full h-full rounded-lg border-0"
                   style={{
-                    minHeight: '350px',
-                    maxHeight: '700px' // 桌面端最大高度限制
+                    minHeight: '500px'
                   }}
                   title="Contract Review AI Interface"
                   allow="microphone; camera; fullscreen; display-capture; clipboard-read; clipboard-write"
@@ -142,6 +142,9 @@ const ContractReviewPage: React.FC = () => {
           </p>
         </div>
       </main>
+      
+      {/* 意见反馈按钮 */}
+      <FeedbackButton />
     </div>
   );
 };

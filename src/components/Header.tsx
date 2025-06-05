@@ -55,13 +55,13 @@ const Header: React.FC = () => {
   if (!user) return null;
 
   return (
-    <header className="w-full py-3 sm:py-4 px-4 sm:px-6 bg-indigo-950/40 backdrop-blur-md border-b border-indigo-800/30 flex justify-between items-center relative z-50">
+    <header className="w-full py-4 px-6 bg-indigo-950/40 backdrop-blur-md border-b border-indigo-800/30 flex justify-between items-center relative z-10">
       <div className="flex items-center space-x-2">
-        <Cpu className="text-blue-400 h-5 w-5 sm:h-6 sm:w-6" />
-        <h1 className="text-white text-base sm:text-lg font-bold whitespace-nowrap">旭普云AI智能办公</h1>
+        <Cpu className="text-blue-400 h-6 w-6" />
+        <h1 className="text-white text-lg font-bold whitespace-nowrap">旭普云</h1>
       </div>
       
-      <div className="flex items-center space-x-2 sm:space-x-4">
+      <div className="flex items-center space-x-4">
         {/* 会话时间显示 */}
         <div className="hidden sm:flex items-center space-x-1 text-xs">
           <Clock size={14} className="text-indigo-300" />
@@ -74,21 +74,21 @@ const Header: React.FC = () => {
         <div className="relative">
           <button
             onClick={() => setShowUserMenu(!showUserMenu)}
-            className="flex items-center space-x-1 sm:space-x-2 bg-indigo-700/40 hover:bg-indigo-600/60 px-2 sm:px-3 py-2 rounded-lg transition-colors touch-manipulation"
+            className="flex items-center space-x-2 bg-indigo-700/40 hover:bg-indigo-600/60 px-3 py-2 rounded-lg transition-colors"
           >
             <div className="text-right">
-              <p className="text-white text-xs sm:text-sm font-medium truncate max-w-[100px] sm:max-w-none">{user.name}</p>
-              <p className="text-xs text-indigo-300 hidden sm:block">{user.role}</p>
+              <p className="text-white text-sm font-medium">{user.name}</p>
+              <p className="text-xs text-indigo-300">{user.role}</p>
             </div>
             <ChevronDown 
-              size={14} 
-              className={`text-indigo-300 transition-transform duration-200 ${showUserMenu ? 'rotate-180' : ''} sm:w-4 sm:h-4`} 
+              size={16} 
+              className={`text-indigo-300 transition-transform duration-200 ${showUserMenu ? 'rotate-180' : ''}`} 
             />
           </button>
 
-          {/* 下拉菜单 - 提高z-index并优化移动端显示 */}
+          {/* 下拉菜单 - 最高层级确保不被遮挡 */}
           {showUserMenu && (
-            <div className="absolute right-0 top-full mt-2 w-64 sm:w-48 bg-indigo-900/95 backdrop-blur-md border border-indigo-700/50 rounded-lg shadow-xl z-[9999] animate-slide-down">
+            <div className="absolute right-0 top-full mt-2 w-48 bg-indigo-900/95 backdrop-blur-md border border-indigo-700/50 rounded-lg shadow-xl z-[9999] animate-slide-down">
               <div className="p-3 border-b border-indigo-700/30">
                 <p className="text-white font-medium text-sm">{user.name}</p>
                 <p className="text-indigo-300 text-xs">{user.role}</p>
@@ -96,7 +96,7 @@ const Header: React.FC = () => {
               
               <div className="p-2">
                 <div className="flex items-center space-x-2 px-3 py-2 text-xs">
-                  <Clock size={14} className="text-indigo-300 flex-shrink-0" />
+                  <Clock size={14} className="text-indigo-300" />
                   <span className="text-indigo-200">会话剩余:</span>
                   <span className={`${getSessionTimeColor(sessionTime)} font-medium`}>
                     {formatSessionTime(sessionTime)}
@@ -105,9 +105,9 @@ const Header: React.FC = () => {
                 
                 <button
                   onClick={handleLogout}
-                  className="w-full flex items-center space-x-2 px-3 py-3 text-red-300 hover:bg-red-500/20 rounded-md transition-colors text-left touch-manipulation"
+                  className="w-full flex items-center space-x-2 px-3 py-2 text-red-300 hover:bg-red-500/20 rounded-md transition-colors text-left"
                 >
-                  <LogOut size={16} className="flex-shrink-0" />
+                  <LogOut size={16} />
                   <span>退出登录</span>
                 </button>
               </div>
@@ -116,10 +116,10 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* 点击外部关闭菜单 - 提高z-index */}
+      {/* 点击外部关闭菜单 */}
       {showUserMenu && (
         <div 
-          className="fixed inset-0 z-[9998] bg-black/10" 
+          className="fixed inset-0 z-[9998]" 
           onClick={() => setShowUserMenu(false)}
         />
       )}
