@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@stagewise/toolbar-react": "^0.4.4",
     "framer-motion": "^11.0.5",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",

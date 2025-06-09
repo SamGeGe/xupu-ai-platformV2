@@ -36,55 +36,33 @@ const MeetingMinutesPage: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Type className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">直接输入会议内容</h3>
-                      <p className="text-xs text-indigo-300">您可以直接输入会议记录，我将帮助您整理成规范的会议纪要</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">1</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">多方式输入</h3>
+                    <p className="text-xs text-indigo-300">支持直接输入会议内容或上传录音、文档，自动识别整理</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <FileUp className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">上传文件</h3>
-                      <p className="text-xs text-indigo-300">您可以上传录音文件、PDF或文档，我将自动识别并整理会议内容</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">2</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">智能重点提取</h3>
+                    <p className="text-xs text-indigo-300">AI自动识别会议重点、决策与任务项，结构化输出</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Bot className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">智能识别</h3>
-                      <p className="text-xs text-indigo-300">AI自动识别会议重点内容和关键决策</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">3</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">任务清单生成</h3>
+                    <p className="text-xs text-indigo-300">自动生成会议任务清单，便于后续跟进</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Scale className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">结构化整理</h3>
-                      <p className="text-xs text-indigo-300">将会议内容整理成清晰的结构化文档</p>
-                    </div>
-                  </div>
+                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-2 mt-2">
+                  <p className="text-xs text-blue-200">适用场景：项目例会、部门沟通、决策会议等。</p>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <CheckCircle className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">任务提取</h3>
-                      <p className="text-xs text-indigo-300">自动提取会议中的任务项和跟进事项</p>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div className="text-xs text-indigo-400 mt-2">
+                如遇加载缓慢请刷新页面。所有上传内容仅用于本地分析，绝不外传。
               </div>
             </div>
           </div>

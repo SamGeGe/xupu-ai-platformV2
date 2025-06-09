@@ -36,55 +36,33 @@ const PolicyAnalysisPage: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Type className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">直接输入政策文本</h3>
-                      <p className="text-xs text-indigo-300">您可以直接把政策文本粘贴到聊天框，我将对政策进行解读</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">1</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">多渠道政策导入</h3>
+                    <p className="text-xs text-indigo-300">支持直接输入或上传PDF、Word、图片等政策文件</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <FileUp className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">上传文件</h3>
-                      <p className="text-xs text-indigo-300">您可以上传PDF、Doc、Docx或者图片文件，我将对政策文件进行识别和分析</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">2</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">智能政策解读</h3>
+                    <p className="text-xs text-indigo-300">AI自动提炼政策要点、关键信息与合规要求</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Bot className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">智能解读</h3>
-                      <p className="text-xs text-indigo-300">AI系统自动解读政策要点和关键信息</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">3</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">影响评估与多维报告</h3>
+                    <p className="text-xs text-indigo-300">分析政策实施影响，生成多维度分析报告与建议</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Scale className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">影响评估</h3>
-                      <p className="text-xs text-indigo-300">分析政策实施可能带来的影响和机遇</p>
-                    </div>
-                  </div>
+                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-2 mt-2">
+                  <p className="text-xs text-blue-200">适用场景：政策解读、合规分析、行业影响评估等。</p>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <CheckCircle className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">分析报告</h3>
-                      <p className="text-xs text-indigo-300">生成详细的政策分析报告，提供建议和应对方案</p>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div className="text-xs text-indigo-400 mt-2">
+                如遇加载缓慢请刷新页面。所有上传内容仅用于本地分析，绝不外传。
               </div>
             </div>
           </div>

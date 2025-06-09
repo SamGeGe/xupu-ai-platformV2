@@ -22,7 +22,7 @@ const DashboardPage: React.FC = () => {
   const navigate = useNavigate();
   const user = getCurrentUser();
 
-  const leftColumnFeatures = [
+  const features = [
     {
       icon: <MessageSquare size={24} />,
       title: 'AI智能助手对话',
@@ -30,41 +30,32 @@ const DashboardPage: React.FC = () => {
       path: '/ai-chat'
     },
     {
-      icon: <FileText size={24} />,
-      title: '合同审查',
-      description: '使用AI辅助分析合同和法律文件',
+      icon: <FileEdit size={24} />,
+      title: 'AI合同审查',
+      description: '上传合同或输入文本，自动识别风险与合规问题',
       path: '/contract-review'
     },
     {
-      icon: <GanttChart size={24} />,
-      title: '招投标分析',
-      description: '智能分析招投标文件和流程',
-      path: '/bid-analysis'
-    },
-    {
       icon: <BookOpen size={24} />,
-      title: '政策分析',
+      title: 'AI政策分析',
       description: '解读和分析各类政策',
       path: '/policy-analysis'
-    }
-  ];
-
-  const rightColumnFeatures = [
-    {
-      icon: <FileEdit size={24} />,
-      title: '会议纪要整理',
-      description: '自动整理会议记录和要点',
-      path: '/meeting-minutes'
     },
     {
       icon: <ClipboardEdit size={24} />,
-      title: '报告撰写',
+      title: 'AI报告撰写',
       description: '智能辅助撰写各类专业报告',
       path: '/report-writing'
     },
     {
+      icon: <FileEdit size={24} />,
+      title: 'AI会议纪要整理',
+      description: '自动整理会议记录和要点',
+      path: '/meeting-minutes'
+    },
+    {
       icon: <FileSearch size={24} />,
-      title: '文件清洗',
+      title: 'AI文件清洗',
       description: '提取图片或文件里的内容',
       path: '/document-cleaning'
     }
@@ -81,9 +72,11 @@ const DashboardPage: React.FC = () => {
             欢迎使用旭普云AI
           </h1>
           <p className="text-indigo-200 text-xs sm:text-sm max-w-2xl mx-auto">
-            使用我们的AI工具套件，提升工作效率
+            集成多种AI工具，助力地理信息与政企办公智能化
           </p>
         </div>
+
+        <div className="text-lg font-semibold text-indigo-300 mt-6 mb-2">智能对话与分析</div>
 
         {/* Search and Research Buttons - Centered in Single Rows */}
         <div className="mb-6 sm:mb-8 space-y-3 sm:space-y-4 max-w-sm mx-auto">
@@ -105,38 +98,19 @@ const DashboardPage: React.FC = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
-          {/* Left Column */}
-          <div className="space-y-3 sm:space-y-4">
-            {leftColumnFeatures.map((feature, index) => (
-              <FeatureButton
-                key={index}
-                icon={React.cloneElement(feature.icon, { 
-                  size: 20, 
-                  className: "sm:w-6 sm:h-6" 
-                })}
-                title={feature.title}
-                description={feature.description}
-                onClick={() => navigate(feature.path)}
-              />
-            ))}
-          </div>
-
-          {/* Right Column */}
-          <div className="space-y-3 sm:space-y-4">
-            {rightColumnFeatures.map((feature, index) => (
-              <FeatureButton
-                key={index}
-                icon={React.cloneElement(feature.icon, { 
-                  size: 20, 
-                  className: "sm:w-6 sm:h-6" 
-                })}
-                title={feature.title}
-                description={feature.description}
-                onClick={() => navigate(feature.path)}
-              />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+          {features.map((feature, index) => (
+            <FeatureButton
+              key={index}
+              icon={React.cloneElement(feature.icon, { 
+                size: 20, 
+                className: "sm:w-6 sm:h-6" 
+              })}
+              title={feature.title}
+              description={feature.description}
+              onClick={() => navigate(feature.path)}
+            />
+          ))}
         </div>
 
         {/* 移动端使用提示 */}
@@ -156,7 +130,7 @@ const DashboardPage: React.FC = () => {
               onClick={() => navigate('/feedback-admin')}
               className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors underline"
             >
-              🔐 管理员入口 (需密码)
+              🔐 管理员入口（仅限授权用户）
             </button>
           </div>
         </footer>

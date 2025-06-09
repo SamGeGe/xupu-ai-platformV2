@@ -36,55 +36,33 @@ const DocumentCleaningPage: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Type className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">直接输入文本</h3>
-                      <p className="text-xs text-indigo-300">您可以直接把文本粘贴到聊天框，我将对内容进行提取和清洗</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">1</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">多格式内容提取</h3>
+                    <p className="text-xs text-indigo-300">支持PDF、Word、图片等多种格式内容提取与清洗</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <FileUp className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">上传文件</h3>
-                      <p className="text-xs text-indigo-300">您可以上传PDF、Doc、Docx或者图片文件，我将对上传文件的内容进行识别和提取</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">2</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">智能关键信息识别</h3>
+                    <p className="text-xs text-indigo-300">AI自动识别并提取文件中的关键信息</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Bot className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">智能识别</h3>
-                      <p className="text-xs text-indigo-300">AI系统自动识别和提取文件中的关键信息</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">3</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">格式转换与报告</h3>
+                    <p className="text-xs text-indigo-300">支持多种格式转换，生成详细清洗报告</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Scale className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">格式转换</h3>
-                      <p className="text-xs text-indigo-300">支持多种格式之间的转换和内容提取</p>
-                    </div>
-                  </div>
+                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-2 mt-2">
+                  <p className="text-xs text-blue-200">适用场景：合同、发票、扫描件、图片等内容提取。</p>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <CheckCircle className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">清洗报告</h3>
-                      <p className="text-xs text-indigo-300">生成详细的文件清洗报告，展示提取的内容和处理结果</p>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div className="text-xs text-indigo-400 mt-2">
+                如遇加载缓慢请刷新页面。所有上传内容仅用于本地分析，绝不外传。
               </div>
             </div>
           </div>

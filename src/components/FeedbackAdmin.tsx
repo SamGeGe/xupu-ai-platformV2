@@ -215,6 +215,16 @@ const FeedbackAdmin: React.FC = () => {
               </button>
             </form>
 
+            <div className="flex justify-center mt-6">
+              <button
+                type="button"
+                onClick={() => window.location.href = '/'}
+                className="inline-block bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-400 hover:to-blue-400 text-white font-medium py-2 px-6 rounded-lg shadow transition-all duration-200"
+              >
+                返回主页
+              </button>
+            </div>
+
             {/* 提示信息 */}
             <div className="mt-6 p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg">
               <p className="text-blue-200 text-xs text-center">

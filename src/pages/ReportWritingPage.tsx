@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, ClipboardEdit, Type, FileUp, Bot, Scale, CheckCircle } from 'lucide-react';
+import { ArrowLeft, ClipboardEdit, Bot } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import NetworkBackground from '../components/NetworkBackground';
 import Header from '../components/Header';
@@ -22,7 +22,7 @@ const ReportWritingPage: React.FC = () => {
         </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Left Panel - Report Writing Info */}
+          {/* 左侧说明区 */}
           <div className="lg:col-span-4">
             <div className="bg-indigo-950/40 backdrop-blur-md border border-indigo-800/30 rounded-xl p-4">
               <div className="flex items-center mb-4">
@@ -30,66 +30,42 @@ const ReportWritingPage: React.FC = () => {
                   <ClipboardEdit size={24} />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold text-white mb-1">报告撰写</h1>
-                  <p className="text-sm text-indigo-300">智能辅助撰写各类专业报告</p>
+                  <h1 className="text-xl font-bold text-white mb-1">报告撰写专家</h1>
+                  <p className="text-sm text-indigo-300">AI智能辅助撰写各类专业报告</p>
                 </div>
               </div>
-
               <div className="space-y-3">
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Type className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">直接输入内容</h3>
-                      <p className="text-xs text-indigo-300">您可以直接输入报告内容或大纲，我将协助您完善和优化</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">1</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">多模板智能写作</h3>
+                    <p className="text-xs text-indigo-300">支持可行性研究报告、律师函、规划设计报告等多种模板</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <FileUp className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">上传文件</h3>
-                      <p className="text-xs text-indigo-300">您可以上传PDF、Doc、Docx或者其他格式文件，我将协助您完善报告内容</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">2</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">自动格式规范</h3>
+                    <p className="text-xs text-indigo-300">自动生成目录、分页，确保格式符合行业标准</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Bot className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">智能写作</h3>
-                      <p className="text-xs text-indigo-300">AI辅助生成专业的报告内容和建议</p>
-                    </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 font-bold mr-2">3</span>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1">一键质量检查</h3>
+                    <p className="text-xs text-indigo-300">支持自动润色、查重，提升报告专业性</p>
                   </div>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <Scale className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">格式规范</h3>
-                      <p className="text-xs text-indigo-300">确保报告格式符合行业标准和要求</p>
-                    </div>
-                  </div>
+                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-2 mt-2">
+                  <p className="text-xs text-blue-200">适用场景：可行性研究、项目申报、法律文书等。</p>
                 </div>
-
-                <div className="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-3">
-                  <div className="flex items-start">
-                    <CheckCircle className="text-blue-400 mr-3 mt-1" size={18} />
-                    <div>
-                      <h3 className="text-base font-semibold text-white mb-1">质量检查</h3>
-                      <p className="text-xs text-indigo-300">自动检查报告质量，提供修改建议和优化方案</p>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div className="text-xs text-indigo-400 mt-2">
+                如遇加载缓慢请刷新页面。所有上传内容仅用于本地分析，绝不外传。
               </div>
             </div>
           </div>
-
-          {/* Right Panel - AI Chat Interface */}
+          {/* 右侧AI聊天区 */}
           <div className="lg:col-span-8">
             <div className="bg-indigo-950/40 backdrop-blur-md border border-indigo-800/30 rounded-xl p-4">
               <div className="flex items-center mb-4">

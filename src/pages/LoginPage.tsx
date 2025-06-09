@@ -61,7 +61,9 @@ const LoginPage: React.FC = () => {
               <Cpu className="h-12 w-12 text-blue-400" />
             </div>
             <div className="text-4xl font-extrabold text-white mb-1 tracking-wide">旭普云</div>
-            <h2 className="text-2xl font-bold text-blue-200 mb-2">地理信息领域AI探索者</h2>
+            <h2 className="text-2xl font-bold text-blue-200 mb-2">
+              地理信息、自然资源、农业农村行业专用AI平台
+            </h2>
           </div>
 
           <div className="bg-indigo-900/30 backdrop-blur-md border border-indigo-700/30 rounded-xl p-8 shadow-xl shadow-purple-950/30">
@@ -129,18 +131,20 @@ const LoginPage: React.FC = () => {
                 ) : (
                   <>
                     <Shield className="h-5 w-5 mr-2" />
-                    登录
+                    立即登录
                   </>
                 )}
               </button>
             </form>
 
+            <div className="text-xs text-indigo-400 mt-1">您的信息仅用于身份验证，绝不存储密码</div>
+
             <div className="mt-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg">
               <p className="text-blue-200 text-xs text-center">
-                💡 提示：默认账号信息已预填，可直接点击登录
+                💡 默认账号信息已预填，直接点击"立即登录"即可体验
               </p>
               <p className="text-indigo-300 text-xs text-center mt-2">
-                本AI适用对象：自然资源、农业农村、地理信息领域
+                适用对象：自然资源、农业农村、地理信息等行业用户。如需帮助请点击右下角"意见反馈"
               </p>
             </div>
           </div>
@@ -158,6 +162,7 @@ const LoginPage: React.FC = () => {
             <Cpu size={12} />
             <p className="whitespace-nowrap">旭普云智慧空间信息技术有限公司 © {new Date().getFullYear()}</p>
           </div>
+          <a href="mailto:service@scsup.com" className="hover:text-indigo-200 transition-colors">联系我们</a>
         </div>
       </footer>
       
